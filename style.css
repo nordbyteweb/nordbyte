@@ -1725,3 +1725,621 @@ a {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* ========================================
+   NORDBYTE — MOTION & LIGHTING
+======================================== */
+
+/* ----------------------------------------
+   GLOBAL LIGHTING
+---------------------------------------- */
+
+body {
+    background:
+        radial-gradient(
+            700px circle at 75% 18%,
+            rgba(101, 201, 209, 0.055),
+            transparent 65%
+        ),
+        radial-gradient(
+            500px circle at 10% 65%,
+            rgba(101, 201, 209, 0.025),
+            transparent 70%
+        ),
+        #050505;
+}
+
+
+/* ----------------------------------------
+   NAVBAR LIGHT
+---------------------------------------- */
+
+.site-header {
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.site-header:hover {
+    border-color:
+        rgba(101, 201, 209, 0.16);
+
+    box-shadow:
+        0 15px 55px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(101, 201, 209, 0.025);
+}
+
+
+/* ----------------------------------------
+   HERO LIGHTING
+---------------------------------------- */
+
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(101, 201, 209, 0.08) 0%,
+            rgba(101, 201, 209, 0.025) 35%,
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    animation:
+        heroLight 8s ease-in-out infinite;
+}
+
+@keyframes heroLight {
+
+    0%,
+    100% {
+        transform:
+            scale(0.95)
+            translate(0, 0);
+
+        opacity: 0.65;
+    }
+
+    50% {
+        transform:
+            scale(1.08)
+            translate(10px, -8px);
+
+        opacity: 1;
+    }
+}
+
+
+.hero-logo {
+    transition:
+        filter 0.5s ease,
+        transform 0.5s ease;
+}
+
+.hero-visual:hover .hero-logo {
+    filter:
+        drop-shadow(
+            0 0 50px
+            rgba(101, 201, 209, 0.28)
+        );
+}
+
+
+/* ----------------------------------------
+   ORBITS
+---------------------------------------- */
+
+.logo-orbit {
+    animation:
+        orbitFloat 10s ease-in-out infinite;
+}
+
+.orbit-two {
+    animation-delay: -4s;
+}
+
+@keyframes orbitFloat {
+
+    0%,
+    100% {
+        transform:
+            rotate(-25deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            rotate(-21deg)
+            scale(1.025);
+    }
+}
+
+.orbit-two {
+    animation-name: orbitFloatTwo;
+}
+
+@keyframes orbitFloatTwo {
+
+    0%,
+    100% {
+        transform:
+            rotate(25deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            rotate(29deg)
+            scale(1.025);
+    }
+}
+
+
+/* ----------------------------------------
+   HERO TEXT REVEAL
+---------------------------------------- */
+
+.hero-eyebrow {
+    animation:
+        fadeUp 0.7s ease 0.05s both;
+}
+
+.hero h1 {
+    animation:
+        fadeUp 0.8s ease 0.12s both;
+}
+
+.hero-text {
+    animation:
+        fadeUp 0.8s ease 0.2s both;
+}
+
+.hero-buttons {
+    animation:
+        fadeUp 0.8s ease 0.28s both;
+}
+
+.hero-meta {
+    animation:
+        fadeUp 0.8s ease 0.36s both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ----------------------------------------
+   BUTTON LIGHT
+---------------------------------------- */
+
+.button-primary {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.button-primary::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.3),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.65s ease;
+}
+
+.button-primary:hover::before {
+    left: 150%;
+}
+
+
+/* ----------------------------------------
+   SERVICE CARDS
+---------------------------------------- */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(101,201,209,0.45),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-icon {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.service-card:hover .service-icon {
+    transform:
+        translateY(-3px)
+        rotate(-3deg);
+
+    background:
+        rgba(101,201,209,0.08);
+
+    border-color:
+        rgba(101,201,209,0.35);
+
+    box-shadow:
+        0 0 25px
+        rgba(101,201,209,0.08);
+}
+
+
+/* ----------------------------------------
+   PORTFOLIO HOVER
+---------------------------------------- */
+
+.project-visual {
+    overflow: hidden;
+}
+
+.project-visual::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(101,201,209,0.08),
+            transparent 55%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease;
+}
+
+.project-card:hover .project-visual::after {
+    opacity: 1;
+}
+
+.project-window {
+    transition:
+        transform 0.5s cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+.project-card:hover .project-window {
+    transform:
+        perspective(800px)
+        rotateY(-4deg)
+        rotateX(1deg)
+        translateY(-4px)
+        scale(1.015);
+}
+
+.mockup-card {
+    transition:
+        transform 0.5s cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        );
+}
+
+.project-card:hover .mockup-card {
+    transform:
+        rotate(-2deg)
+        translateY(-5px)
+        scale(1.02);
+}
+
+
+/* ----------------------------------------
+   ABOUT LOGO
+---------------------------------------- */
+
+.about-logo-wrap {
+    transition:
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.about-logo-wrap:hover {
+    border-color:
+        rgba(101,201,209,0.28);
+
+    box-shadow:
+        0 0 80px
+        rgba(101,201,209,0.07);
+}
+
+.about-logo {
+    animation:
+        aboutFloat 7s ease-in-out infinite;
+}
+
+@keyframes aboutFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+}
+
+
+/* ----------------------------------------
+   PROCESS
+---------------------------------------- */
+
+.process-item {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.process-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        var(--cyan);
+
+    box-shadow:
+        0 0 15px
+        rgba(101,201,209,0.4);
+
+    transition:
+        width 0.45s ease;
+}
+
+.process-item:hover::after {
+    width: 100%;
+}
+
+
+/* ----------------------------------------
+   CONTACT GLOW
+---------------------------------------- */
+
+.contact-section {
+    position: relative;
+}
+
+.contact-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -300px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(101,201,209,0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+.contact-button {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.contact-button::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(101,201,209,0.1) 50%,
+            transparent 80%
+        );
+
+    transform:
+        translateX(-100%);
+
+    transition:
+        transform 0.6s ease;
+}
+
+.contact-button:hover::before {
+    transform:
+        translateX(100%);
+}
+
+
+/* ----------------------------------------
+   FOOTER
+---------------------------------------- */
+
+.footer-logo {
+    transition:
+        color 0.3s ease;
+}
+
+.footer-logo:hover {
+    color:
+        var(--cyan);
+}
+
+
+/* ----------------------------------------
+   SELECTION
+---------------------------------------- */
+
+::selection {
+    background:
+        rgba(101,201,209,0.25);
+
+    color:
+        white;
+}
+
+
+/* ----------------------------------------
+   SCROLLBAR
+---------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        #242424;
+
+    border-radius:
+        999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        var(--cyan);
+}
+
+
+/* ----------------------------------------
+   MOBILE — REDUCE MOTION
+---------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .hero-visual::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .logo-orbit {
+        opacity: 0.65;
+    }
+
+    .hero-logo {
+        filter:
+            drop-shadow(
+                0 0 30px
+                rgba(45,190,210,0.16)
+            );
+    }
+}
+
+
+/* ----------------------------------------
+   ACCESSIBILITY
+---------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-visual::before,
+    .hero-logo,
+    .logo-orbit,
+    .about-logo,
+    .hero-eyebrow,
+    .hero h1,
+    .hero-text,
+    .hero-buttons,
+    .hero-meta {
+        animation: none !important;
+    }
+
+    .button-primary::before,
+    .contact-button::before {
+        display: none;
+    }
+}
