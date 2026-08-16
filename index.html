@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nordbyte Webdesign</title>
+    <title>Nordbyte Web Design — Moderna hemsidor</title>
 
     <meta
         name="description"
-        content="Nordbyte skapar moderna och professionella hemsidor för lokala företag."
+        content="Nordbyte Web Design skapar moderna, snabba och professionella hemsidor för företag och kreatörer."
     >
+
+    <meta name="theme-color" content="#050505">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,10 +23,10 @@
          HEADER
     ========================== -->
 
-    <header>
-        <nav>
+    <header class="site-header">
+        <nav class="nav">
 
-            <a href="/" class="logo">
+            <a href="#top" class="logo">
                 NORDBYTE
             </a>
 
@@ -35,24 +37,31 @@
                 <a href="#contact">Kontakt</a>
             </div>
 
+            <a href="#contact" class="nav-cta">
+                Starta projekt
+            </a>
+
         </nav>
     </header>
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <main id="top">
 
-    <main>
-
-        <!-- HERO -->
+        <!-- =========================
+             HERO
+        ========================== -->
 
         <section class="hero">
 
             <div class="hero-content">
 
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Tillgänglig för nya projekt
+                </div>
+
                 <p class="hero-eyebrow">
-                    WEBBDESIGN FÖR LOKALA FÖRETAG
+                    WEBBDESIGN FÖR FÖRETAG & KREATÖRER
                 </p>
 
                 <h1>
@@ -62,20 +71,26 @@
                 </h1>
 
                 <p class="hero-text">
-                    Vi skapar moderna, snabba och professionella hemsidor
-                    som hjälper ditt företag att synas, engagera och växa.
+                    Vi skapar moderna, snabba och professionella
+                    hemsidor som hjälper dig att synas, bygga förtroende
+                    och växa online.
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#portfolio">
+                    <a href="#portfolio" class="button button-primary">
                         Se våra projekt
+                        <span>↗</span>
                     </a>
 
-                    <a href="#contact">
+                    <a href="#contact" class="button button-secondary">
                         Starta ett projekt
                     </a>
+                </div>
 
+                <div class="hero-meta">
+                    <span>✦ Modern design</span>
+                    <span>✦ Responsivt</span>
+                    <span>✦ Byggt för webben</span>
                 </div>
 
             </div>
@@ -83,9 +98,14 @@
 
             <div class="hero-visual">
 
+                <div class="hero-glow"></div>
+
+                <div class="logo-orbit orbit-one"></div>
+                <div class="logo-orbit orbit-two"></div>
+
                 <img
                     src="logo-transparent.png"
-                    alt="Nordbyte Webdesign logotyp"
+                    alt="Nordbyte Web Design logotyp"
                     class="hero-logo"
                 >
 
@@ -95,11 +115,102 @@
 
 
         <!-- =========================
-             TJÄNSTER
+             SERVICES
         ========================== -->
 
-        <section id="services">
-            <!-- Tjänster byggs här -->
+        <section id="services" class="section services-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">01 — TJÄNSTER</p>
+
+                    <h2>
+                        Allt du behöver<br>
+                        <span>på webben.</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    Från första idé till färdig hemsida.
+                    Vi fokuserar på design som ser bra ut,
+                    fungerar snabbt och faktiskt har ett syfte.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <article class="service-card featured">
+                    <div class="service-number">01</div>
+
+                    <div class="service-icon">✦</div>
+
+                    <h3>Webbdesign</h3>
+
+                    <p>
+                        Moderna och genomtänkta designer som
+                        representerar ditt varumärke och ger
+                        besökaren rätt första intryck.
+                    </p>
+
+                    <span class="service-arrow">↗</span>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-number">02</div>
+
+                    <div class="service-icon">⌁</div>
+
+                    <h3>Webbutveckling</h3>
+
+                    <p>
+                        Snabba och responsiva hemsidor byggda
+                        med ren och modern kod för en stabil
+                        upplevelse på alla skärmar.
+                    </p>
+
+                    <span class="service-arrow">↗</span>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-number">03</div>
+
+                    <div class="service-icon">◈</div>
+
+                    <h3>Företagswebb</h3>
+
+                    <p>
+                        En professionell digital plats för ditt
+                        företag där kunder enkelt kan förstå
+                        vad du erbjuder och kontakta dig.
+                    </p>
+
+                    <span class="service-arrow">↗</span>
+                </article>
+
+
+                <article class="service-card">
+                    <div class="service-number">04</div>
+
+                    <div class="service-icon">+</div>
+
+                    <h3>Underhåll</h3>
+
+                    <p>
+                        Behöver du ändra något efter lanseringen?
+                        Vi kan hjälpa till med uppdateringar,
+                        förbättringar och vidareutveckling.
+                    </p>
+
+                    <span class="service-arrow">↗</span>
+                </article>
+
+            </div>
+
         </section>
 
 
@@ -107,26 +218,286 @@
              PORTFOLIO
         ========================== -->
 
-        <section id="portfolio">
-            <!-- Portfolio byggs här -->
+        <section id="portfolio" class="section portfolio-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">02 — PORTFOLIO</p>
+
+                    <h2>
+                        Design som<br>
+                        <span>gör skillnad.</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    Några av våra projekt och koncept.
+                    Ditt företag kan bli nästa.
+                </p>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <article class="project-card project-large">
+
+                    <div class="project-visual project-dark">
+
+                        <div class="project-window">
+                            <div class="window-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="window-content">
+                                <small>NORDBYTE</small>
+                                <strong>Digital presence.</strong>
+                                <div class="window-line"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="project-category">
+                                Web Design
+                            </span>
+
+                            <h3>Digitalt varumärke</h3>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-visual project-cyan">
+
+                        <div class="mockup-card">
+                            <span>YOUR BRAND</span>
+                            <strong>Stand out.</strong>
+                            <div class="mockup-button">
+                                Explore
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="project-category">
+                                Brand & Web
+                            </span>
+
+                            <h3>Företagshemsida</h3>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-visual project-grid">
+
+                        <div class="grid-circle"></div>
+                        <div class="grid-square"></div>
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="project-category">
+                                Development
+                            </span>
+
+                            <h3>Webbupplevelse</h3>
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- =========================
-             OM OSS
+             ABOUT
         ========================== -->
 
-        <section id="about">
-            <!-- Om Nordbyte byggs här -->
+        <section id="about" class="section about-section">
+
+            <div class="about-visual">
+
+                <div class="about-logo-wrap">
+
+                    <img
+                        src="logo-transparent.png"
+                        alt="Nordbyte"
+                        class="about-logo"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p class="section-label">03 — OM NORDBYTE</p>
+
+                <h2>
+                    Litet team.
+                    <br>
+                    <span>Stora idéer.</span>
+                </h2>
+
+                <p>
+                    Nordbyte Web Design är en liten tech-startup med
+                    fokus på att skapa moderna digitala upplevelser
+                    för företag, kreatörer och entreprenörer.
+                </p>
+
+                <p>
+                    Vi tror inte att en bra hemsida behöver vara
+                    komplicerad. Den ska vara snygg, snabb, tydlig
+                    och framför allt hjälpa verksamheten bakom den.
+                </p>
+
+                <div class="about-points">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>Personligt samarbete</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Modern teknik</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Fokus på resultat</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
 
         <!-- =========================
-             KONTAKT
+             PROCESS
         ========================== -->
 
-        <section id="contact">
-            <!-- Kontaktsektion byggs här -->
+        <section class="section process-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">04 — PROCESS</p>
+
+                    <h2>
+                        Från idé<br>
+                        <span>till live.</span>
+                    </h2>
+                </div>
+
+                <p class="section-intro">
+                    En enkel process utan onödigt krångel.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-item">
+                    <span>01</span>
+                    <h3>Idé</h3>
+                    <p>
+                        Vi börjar med att förstå din verksamhet,
+                        dina mål och vad hemsidan behöver göra.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>02</span>
+                    <h3>Design</h3>
+                    <p>
+                        Vi tar fram en visuell riktning som
+                        passar ditt varumärke och din målgrupp.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>03</span>
+                    <h3>Bygg</h3>
+                    <p>
+                        Designen blir till en snabb, responsiv
+                        och fungerande hemsida.
+                    </p>
+                </div>
+
+                <div class="process-item">
+                    <span>04</span>
+                    <h3>Lansera</h3>
+                    <p>
+                        Vi testar allt, gör sidan redo och
+                        hjälper dig få den live.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="contact-inner">
+
+                <p class="section-label">05 — KONTAKT</p>
+
+                <h2>
+                    Har du en idé?
+                    <br>
+                    <span>Låt oss bygga den.</span>
+                </h2>
+
+                <p>
+                    Berätta lite om ditt projekt så tar vi
+                    det därifrån.
+                </p>
+
+                <a
+                    href="mailto:hello@nordbyte.se"
+                    class="contact-button"
+                >
+                    hello@nordbyte.se
+                    <span>↗</span>
+                </a>
+
+            </div>
+
         </section>
 
     </main>
@@ -136,8 +507,32 @@
          FOOTER
     ========================== -->
 
-    <footer>
-        <!-- Footer byggs här -->
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <a href="#top" class="footer-logo">
+                NORDBYTE
+            </a>
+
+            <p>
+                Web Design & Development
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Nordbyte Web Design
+            </span>
+
+            <a href="#top">
+                Till toppen ↑
+            </a>
+
+        </div>
+
     </footer>
 
 </body>
